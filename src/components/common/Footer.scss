@@ -5,6 +5,7 @@
   position: relative;
   font-family: 'Helvetica Neue', sans-serif;
   overflow-x: hidden;
+  
 
   &__top {
     display: flex;
@@ -82,6 +83,7 @@
     margin-left: auto;
     margin-right: auto;
     
+    
 
     span {
       color: #bbb;
@@ -90,15 +92,15 @@
 
   &__brand {
     display: flex;
-    justify-content: flex-start;
-    gap: 5.5rem;
+    justify-content: center;
+    gap: 2rem;
     margin-top: 1rem;
     max-width: 1500px;
 
 
     h1 {
       font-family: 'Georgia', serif;
-      font-size: 10rem;
+      font-size: 5rem;
       letter-spacing: 0.1rem;
       
       color: white;
@@ -107,4 +109,46 @@
 
   
   
+}
+
+@media screen and (max-width: 768px) {
+  .footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; // optional: spacing between columns
+}
+
+.footer__column {
+  flex: 1 1 8rem;
+}
+
+.footer__column:nth-child(3) {
+  width: 100%;  // Move SOCIAL to next line
+  margin-top: 1.5rem;
+}
+
+.footer__column.newsletter {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.footer__bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__brand{
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  gap: 0;
+  
+  h1{
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
 }

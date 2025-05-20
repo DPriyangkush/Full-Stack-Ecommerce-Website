@@ -8,12 +8,12 @@ const Footer = () => {
         <div className="footer__column">
           <h4>SHOP</h4>
           <ul>
-            <li>Catalog</li>
-            <li>Lux Blazer</li>
-            <li>One Piece</li>
-            <li>Batavia Essentials</li>
-            <li>Mens</li>
-            <li>Womens</li>
+            <li>Timeless Classics</li>           
+            <li>Regal Silks</li>                 
+            <li>Breezy Cottons</li>              
+            <li>Sharodiya Exclusive</li>               
+            <li>Shaadi Edit</li>                 
+            <li>Festive Aangan</li>
           </ul>
         </div>
 
@@ -25,7 +25,7 @@ const Footer = () => {
             <li>Blog</li>
             <li>Contact</li>
             <li>Privacy Policy</li>
-            <li>404</li>
+            <li>Refund & Returns</li>
           </ul>
         </div>
 
@@ -34,7 +34,6 @@ const Footer = () => {
           <ul>
             <li>X (Twitter)</li>
             <li>Instagram</li>
-            <li>TikTok</li>
             <li>YouTube</li>
             <li>Facebook</li>
           </ul>
@@ -51,11 +50,11 @@ const Footer = () => {
 
       <div className="footer__bottom">
         <span>Copyright 2025, Priyangkush Debnath</span>
-        <span>Made by Love</span>
+        <span>Made with Love</span>
       </div>
 
       <div className="footer__brand">
-        <h1>SUNITA</h1>
+        <h1>SHARODIYA</h1>
         <h1>SAREES</h1>
       </div>
 
