@@ -1,0 +1,168 @@
+/* LuxBlazer.scss */
+
+.lux-collection {
+  padding: 2rem;
+  background: #fff;
+  font-family: 'Helvetica Neue', sans-serif, 'Playfair Display', 'serif';
+
+  .lux-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+
+    .lux-info {
+        line-height: 2.5rem;
+      p {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: #000000;
+        margin: 0;
+        
+      }
+
+      h2 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-family: 'Playfair Display';
+        margin: 0;
+      }
+    }
+
+    .view-all {
+      background: none;
+      border: 1px solid #000;
+      padding: 1rem 3rem;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+  }
+
+  .divider{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    height: 1px;
+    width: 100%;
+    background-color: #a6a6a6;
+    margin-bottom: 3rem;
+    
+  }
+
+  .lux-products {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .product-card {
+      flex: 1 1 calc(33.333% - 2rem);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      .image-wrapper {
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+
+      .product-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+
+  // Grouping name and category in a column
+        .product-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .product-name {
+            font-weight: 600;
+            display: block;
+            }
+
+            .product-category {
+            font-size: 0.75rem;
+            color: #999;
+            }
+        }
+
+  // Price aligned to right
+        .product-price {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+
+            span {
+            font-weight: 600;
+            }
+
+            .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.875rem;
+            }
+        }
+    }  
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .lux-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1.5rem;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+
+    .lux-info {
+        line-height: 2.5rem;
+      
+
+      h2 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-family: 'Playfair Display';
+        letter-spacing: 0.01rem;
+        margin: 0;
+        line-height: 3rem;
+      }
+    }
+
+    .view-all {
+      background: none;
+      border: 1px solid #000;
+      padding: 1rem 3rem !important;
+      text-transform: uppercase;
+      font-size: 0.75rem !important;
+      cursor: pointer;
+    }
+  }
+
+  .divider{
+    
+    margin-bottom: 2rem !important;
+    
+  }
+  .image-wrapper {
+    height: 500px !important;
+  }
+ 
+}
+
