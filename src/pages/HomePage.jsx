@@ -4,6 +4,7 @@ import Header from "../components/common/header"
 import Footer from "../components/common/Footer"
 import HeroSection from "../components/common/HeroSection"
 import ProductList from "../components/products/ProductList"
+import Story from "../components/common/Story"
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <ProductList />
+      <Story />
       <Footer />
     </>
   )
