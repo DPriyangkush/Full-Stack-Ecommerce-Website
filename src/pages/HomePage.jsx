@@ -5,6 +5,8 @@ import Footer from "../components/common/Footer"
 import HeroSection from "../components/common/HeroSection"
 import ProductList from "../components/products/ProductList"
 import Story from "../components/common/Story"
+import ProductShowcase from "../components/common/ProductShowcase.jsx"
+
 
 export default function HomePage() {
   return (
@@ -13,7 +15,9 @@ export default function HomePage() {
       <HeroSection />
       <ProductList />
       <Story />
+      <ProductShowcase />
       <Footer />
+      
     </>
   )
 }
