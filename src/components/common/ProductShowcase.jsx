@@ -1,19 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import "./ProductShowcase.scss";
 import saree3 from "../../assets/saree3.jpeg"
 import saree2 from "../../assets/saree2.jpeg"
 import saree1 from "../../assets/saree1.jpeg"
+import lock from "../../assets/online-shopping.png"
+import delivery from "../../assets/delivery-truck.png"
+import parcel from "../../assets/express-delivery.png"
+
+const images = [saree1, saree2, saree3, saree1]; // or use a unique list
 
 const ProductShowcase = () => {
+
+  const [selectedImage, setSelectedImage] = useState(saree3);
   return (
     <div className="product-page">
       {/* LEFT: Images */}
       <div className="product-images">
-        <img className="main-image" src={saree3} alt="Dress" />
+        <img className="main-image" src={selectedImage} alt="Dress" />
         <div className="thumbnails">
-          <img src={saree1} alt="thumb1" />
-          <img src={saree2} alt="thumb2" />
-          <img src={saree3} alt="thumb3" />
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`thumb${index}`}
+              className={`thumbnail ${selectedImage === img ? "active" : ""}`}
+              onClick={() => setSelectedImage(img)}
+            />
+          ))}
         </div>
       </div>
 
@@ -60,9 +73,19 @@ const ProductShowcase = () => {
         <div className="divider"></div>
 
          <div className="info">
-          <span>🔒 Safe Payment</span>
-          <span>🚚 Free Shipping</span>
-          <span>📦 Delivery in 2-5 days</span>
+          
+          <div className="info-one info__column">
+            <img src={lock} alt="" srcset="" />
+            <span>Safe Payment</span>
+          </div>
+          <div className="info-two info__column">
+            <img src={delivery} alt="" srcset="" />
+            <span>Free Shipping</span>
+          </div>
+          <div className="info-three info__column">
+            <img src={parcel} alt="" srcset="" />
+            <span>Delivery in 2-5 days</span>
+          </div>
         </div>
 
         <div className="actions">
