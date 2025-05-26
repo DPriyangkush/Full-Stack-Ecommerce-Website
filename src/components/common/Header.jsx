@@ -3,6 +3,7 @@ import {useEffect, useRef, useState } from 'react';
 import '../common/Header.scss';
 import { FiSearch, FiShoppingCart, FiX } from 'react-icons/fi';
 import gsap from 'gsap';
+import CartItems from '../cart/CartItems';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -202,7 +203,11 @@ const Header = () => {
             Your cart is currently empty.
           </a>
         </nav>
+
+        
       )}
+
+      
 
 
       <div className="icons">

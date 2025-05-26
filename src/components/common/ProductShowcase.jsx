@@ -9,9 +9,15 @@ import parcel from "../../assets/express-delivery.png"
 
 const images = [saree1, saree2, saree3, saree1]; // or use a unique list
 
+
+
 const ProductShowcase = () => {
 
   const [selectedImage, setSelectedImage] = useState(saree3);
+  const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState("L");
+  const [selectedColor, setSelectedColor] = useState("Floral");
+
   return (
     <div className="product-page">
       {/* LEFT: Images */}
@@ -48,27 +54,40 @@ const ProductShowcase = () => {
           <div className="size">
             <p>Size</p>
             <div className="options">
-              <button className="selected">L</button>
-              <button>S</button>
-              <button>XS</button>
+              {["L", "S", "XS"].map((size) => (
+                <button
+                  key={size}
+                  className={selectedSize === size ? "selected" : ""}
+                  onClick={() => setSelectedSize(size)}
+                >
+                  {size}
+                </button>
+              ))}
             </div>
           </div>
 
           <div className="color">
             <p>Color</p>
             <div className="options">
-              <button className="selected">Floral</button>
-              <button>Beige</button>
-              <button>Black</button>
+              {["Floral", "Beige", "Black"].map((color) => (
+                <button
+                  key={color}
+                  className={selectedColor === color ? "selected" : ""}
+                  onClick={() => setSelectedColor(color)}
+                >
+                  {color}
+                </button>
+              ))}
             </div>
           </div>
         </div>
 
         <div className="quantity">
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
+          <button onClick={() => setQuantity(prev => Math.max(1, prev - 1))}>-</button>
+          <span>{quantity}</span>
+          <button onClick={() => setQuantity(prev => prev + 1)}>+</button>
         </div>
+
 
         <div className="divider"></div>
 
